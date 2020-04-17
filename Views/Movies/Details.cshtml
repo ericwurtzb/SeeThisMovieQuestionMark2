@@ -1,0 +1,178 @@
+﻿@model SeeThisMovieQuestionMark.Models.Movie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Movie</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.original_title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.original_title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.year)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.year)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date_published)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date_published)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.genre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.genre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.duration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.language)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.language)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.director)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.director)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.writer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.writer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.production_company)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.production_company)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.actors)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.actors)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.avg_vote)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.avg_vote)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.votes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.votes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.budget)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.budget)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.worlwide_gross_income)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.worlwide_gross_income)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.metascore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.metascore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.reviews_from_users)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.reviews_from_users)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.reviews_from_critics)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.reviews_from_critics)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.imdb_title_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
