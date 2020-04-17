@@ -1,147 +1,30 @@
-﻿@model IEnumerable<SeeThisMovieQuestionMark.Models.Movie>
+﻿@model IEnumerable<SeeThisMovieQuestionMark.Models.MovieViewModel>
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<div class="jumbotron" style="background-color: lightgoldenrodyellow">
+    <h1 class="display-4">Should you see this movie?</h1>
+    <p class="lead">Many people wonder if they should actually go see a movie or not...</p>
+        <hr class="my-4">
+        <p>Enter in your info below!</p>
+</div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.original_title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.year)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.date_published)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.genre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.duration)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.country)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.language)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.director)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.writer)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.production_company)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.actors)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.avg_vote)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.votes)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.budget)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.worlwide_gross_income)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.metascore)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.reviews_from_users)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.reviews_from_critics)
-        </th>
-        <th></th>
-    </tr>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            @using (Html.BeginForm())
+            {
+            <h2>How picky are you?</h2>
+            <input id="slider" type="range" min="0" max="8" step="2" onchange="newvalue()" />
+            }
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.original_title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.year)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.date_published)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.genre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.duration)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.country)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.language)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.director)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.writer)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.production_company)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.actors)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.avg_vote)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.votes)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.budget)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.worlwide_gross_income)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.metascore)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.reviews_from_users)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.reviews_from_critics)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.imdb_title_id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.imdb_title_id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.imdb_title_id })
-        </td>
-    </tr>
-}
+        </div>
+        
+    </div>
 
-</table>
+
+
+</div>
+

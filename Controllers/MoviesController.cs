@@ -18,7 +18,29 @@ namespace SeeThisMovieQuestionMark.Controllers
         // GET: Movies
         public ActionResult Index()
         {
-            return View(db.Movies.ToList());
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Index(MovieViewModel movie)
+        {
+            //movie has pickiness level, title, and all the webservice parameters
+            //extract webservice params
+            //send webservice params
+            ResultsViewModel results = new ResultsViewModel();
+            if (predictedRating >= movie.pickiness)
+            {
+                results.shouldSee = true;
+            }
+            else
+            {
+                results.shouldSee = false;
+            }
+            //compute yes/no
+            //run sql query based off of pickiness level
+            //pass in pickiness level, webservice predicted rating, yes/no, and suggested movies
+            
+            return View("Results");
         }
 
         // GET: Movies/Details/5
