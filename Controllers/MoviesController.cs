@@ -28,14 +28,12 @@ namespace SeeThisMovieQuestionMark.Controllers
             //extract webservice params
             //send webservice params
             ResultsViewModel results = new ResultsViewModel();
-            if (predictedRating >= movie.pickiness)
-            {
-                results.shouldSee = true;
-            }
-            else
-            {
-                results.shouldSee = false;
-            }
+            //if (predictedRating >= movie.pickiness)
+            //{
+            //    results.shouldSee = true;
+            //} else {
+            //    results.shouldSee = false;
+            //}
             //compute yes/no
             //run sql query based off of pickiness level
             //pass in pickiness level, webservice predicted rating, yes/no, and suggested movies
