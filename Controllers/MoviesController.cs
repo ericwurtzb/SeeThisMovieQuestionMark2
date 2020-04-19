@@ -16,6 +16,10 @@ namespace SeeThisMovieQuestionMark.Controllers
         private MovieContext db = new MovieContext();
 
         // GET: Movies
+        public ActionResult Browse()
+        {
+            return View(db.Movies.ToList());
+        }
         public ActionResult Index()
         {
             return View();
