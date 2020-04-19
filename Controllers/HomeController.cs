@@ -80,7 +80,7 @@ namespace SeeThisMovieQuestionMark.Controllers
                 var suggested_title = db.Database.SqlQuery<string>(title_query).FirstOrDefault().ToString();
                 string year_query = "SELECT year FROM movies WHERE title='" + suggested_title + "'";
                 var year = db.Database.SqlQuery<int>(year_query).FirstOrDefault().ToString();
-                ViewBag.Suggestion = ("We think you might also like this movie: " + suggested_title + " (" + year + ")");
+                ViewBag.Suggestion = ("Based on your pickiness level, we think you might like this movie: " + suggested_title + " (" + year + ")");
             }
             catch (Exception e)
             {
